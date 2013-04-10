@@ -21,7 +21,7 @@ void		my_len(char *str)
 int		manage_cmd(t_cli **cli)
 {
   int		i;
-  int		(*funcToCall[3])(struct s_cli **);
+  int		(*funcToCall[4])(struct s_cli **);
 
   i = 0;
   if ((((*cli)->logaccepted) == 1) && (((*cli)->passaccepted) == 1))
@@ -29,7 +29,8 @@ int		manage_cmd(t_cli **cli)
       funcToCall[0] = no_file;
       funcToCall[1] = transfer;
       funcToCall[2] = my_logout;
-      while (i < 3)
+      funcToCall[3] = adduser;
+      while (i < 4)
 	{
 	  if ((*funcToCall[i])(cli) == -1)
 	    return (-1);

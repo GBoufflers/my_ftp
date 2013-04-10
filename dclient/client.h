@@ -37,5 +37,6 @@ int			no_file(t_cli *cli);
 int			transfer(t_cli *cli);
 int			secu(t_cli *cli);
 int			my_logout(t_cli *cli);
+int			adduser(t_cli *cli);
 
 #endif

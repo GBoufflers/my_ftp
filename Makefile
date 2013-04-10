@@ -5,6 +5,7 @@ SRCS	=	dserver/main.c\
 		dserver/handle_signal.c\
 		dserver/set_path.c\
 		dserver/manage_cmd.c\
+		dserver/adduser.c\
 		dserver/connection.c\
 		dserver/get_message.c\
 		dserver/init.c\
@@ -23,6 +24,7 @@ SRCS	=	dserver/main.c\
 
 SRCC	=	dclient/main.c\
 		dclient/handle_signal.c\
+		dclient/adduser.c\
 		dclient/my_lls.c\
 		dclient/handle_user.c\
 		dclient/handle_cmd.c\

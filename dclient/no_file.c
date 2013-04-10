@@ -14,7 +14,6 @@ int		no_file(t_cli *cli)
     }
   else if (strncmp(cli->buff, "ls", 2) == 0)
     {
-      puts("je suis dans le ls");
       if (my_ls(cli->sock) == -1)
 	return (-1);
     }

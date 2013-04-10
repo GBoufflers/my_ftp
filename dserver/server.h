@@ -43,6 +43,7 @@ typedef struct		s_cli
   char			*fileloc;
   char			*checkloc;
   char			*logtmp;
+  char			*passwdloc;
   char			buff[1024];
   int			len;
   int			logaccepted;
@@ -55,5 +56,6 @@ int			no_file(t_cli **cli);
 int			transfer(t_cli **cli);
 int			secu(t_cli **cli);
 int			my_logout(t_cli **cli);
+int			adduser(t_cli **cli);
 
 #endif

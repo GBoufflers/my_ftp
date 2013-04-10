@@ -36,6 +36,7 @@ int			set_path(t_cli **cli)
 	isPresent = 1;
 	break;
       }
+  (*cli)->passwdloc = strdup(new);
   new = strcat(new, "/");
   new = strcat(new, (*cli)->logtmp);
   return (fill_struct(cli, new, isPresent));

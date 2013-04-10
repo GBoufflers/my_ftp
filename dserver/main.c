@@ -19,7 +19,7 @@ int	handle_client(int cs)
 	if (connection(passwd, &cli) == -1)
 	  cont = -1;
       if (cont != -1)
-	if (manage_cmd(&cli) == -1)
+	if (manage_cmd(&cli, &passwd) == -1)
 	  cont = -1;      
     }  
   return (0);
