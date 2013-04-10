@@ -38,5 +38,6 @@ int			transfer(t_cli *cli);
 int			secu(t_cli *cli);
 int			my_logout(t_cli *cli);
 int			adduser(t_cli *cli);
+int			my_lpwd(t_cli *cli);
 
 #endif

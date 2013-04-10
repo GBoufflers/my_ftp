@@ -41,6 +41,7 @@ void            send_file(int sock, char buff[1024], char *file, char *path)
   f = fopen(filelocation, "r");
   if (f == NULL)
     {
+      puts(filelocation);
       puts("the file does not exist");
       send_error(sock, "the file does not exist");
     }
@@ -52,23 +53,23 @@ void            send_file(int sock, char buff[1024], char *file, char *path)
     }
 }
 
-void		my_put(int sock, char buff[1024], char *path)
-{
-  char          **args;
-  int           i;
+  void		my_put(int sock, char buff[1024], char *path)
+  {
+    char          **args;
+    int           i;
 
-  i = 0;
-  args = totab(buff, ' ');
-  if (getSize(args) == 2)
-    {
-      while (args[1][i] != '\0')
-        {
-          if (args[1][i] == '\n')
-            args[1][i] = '\0';
-          i++;
-        }
-      send_file(sock, buff, args[1], path);
-    }
-  else
-    send_error(sock, "Usage : get <file>");
-}
+    i = 0;
+    args = totab(buff, ' ');
+    if (getSize(args) == 2)
+      {
+	while (args[1][i] != '\0')
+	  {
+	    if (args[1][i] == '\n')
+	      args[1][i] = '\0';
+	    i++;
+	  }
+	send_file(sock, buff, args[1], path);
+      }
+    else
+      send_error(sock, "Usage : get <file>");
+  }

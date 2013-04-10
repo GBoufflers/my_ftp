@@ -39,9 +39,11 @@ int		init(t_cli **cli, char *ip, char *port)
   (*cli)->sin.sin_port = htons(atoi(port));
   if (((*cli)->path = getenv("PWD")) == NULL)
     return (-1);
-  strcat((*cli)->path, "/dataclient/");
-  if (check_dir_client(cli) == -1)
+  strcat((*cli)->path, "/");
+  /*
+    if (check_dir_client(cli) == -1)
     return (-1);
+  */
   bzero((*cli)->buff, 1024);
   (*cli)->isleaving = 0;
   return (0);
