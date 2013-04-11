@@ -36,6 +36,7 @@ void            send_file(int sock, char buff[1024], char *file, char *path)
   f = NULL;
   bzero(filelocation, 1024);
   strcat(filelocation, path);
+  strcat(filelocation, "/");
   strcat(filelocation, file);
   puts(filelocation);
   f = fopen(filelocation, "r");

@@ -9,6 +9,7 @@ void	get_it(int sock, char file[1024], char *path)
 
   bzero(pathfile, 1024);
   strcat(pathfile, path);
+  strcat(pathfile, "/");
   strcat(pathfile, file);
   if ((fd = open(pathfile, O_WRONLY | O_APPEND | O_CREAT, 0644)) != -1)
     {
