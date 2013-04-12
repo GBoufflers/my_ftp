@@ -39,7 +39,8 @@ int	main(int ac, char **av)
   handle_signal();
   while (42)
     {
-      cfd = accept(server->fd, (struct sockaddr *)(&(server->s_in_client)), &(server->s_in_size));
+      cfd = accept(server->fd, (struct sockaddr *)
+		   (&(server->s_in_client)), &(server->s_in_size));
       if (cfd == -1)
 	my_exit("error on accept", -1);
       printf("un client se connecte avec sur la socket %d\n", cfd);

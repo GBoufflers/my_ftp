@@ -2,7 +2,7 @@
 
 int		handle_cmd(t_cli *cli)
 {
-  int		(*funcToCall[7])(struct s_cli *);
+  int		(*funcToCall[8])(struct s_cli *);
   int		i;
   int		ret;
 
@@ -16,10 +16,11 @@ int		handle_cmd(t_cli *cli)
   funcToCall[4] = adduser;
   funcToCall[5] = my_lpwd;
   funcToCall[6] = my_lcd;
+  funcToCall[7] = my_lmkdir;
   ret = read(0, cli->buff, 1024);
   if (ret == -1)
     return (-1);
-  while (i < 7)
+  while (i < 8)
     {
       if ((*funcToCall[i])(cli) == -1)
 	return (-1);

@@ -40,5 +40,6 @@ int			my_logout(t_cli *cli);
 int			adduser(t_cli *cli);
 int			my_lpwd(t_cli *cli);
 int			my_lcd(t_cli *cli);
+int			my_lmkdir(t_cli *cli);
 
 #endif

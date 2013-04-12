@@ -26,6 +26,7 @@ SRCC	=	dclient/main.c\
 		dclient/handle_signal.c\
 		dclient/adduser.c\
 		dclient/my_lls.c\
+		dclient/my_lmkdir.c\
 		dclient/my_lpwd.c\
 		dclient/my_lcd.c\
 		dclient/handle_user.c\

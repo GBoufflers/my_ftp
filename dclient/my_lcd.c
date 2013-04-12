@@ -12,11 +12,13 @@ int		my_lcd(t_cli *cli)
 	  args = totab(cli->buff, ' ');
 	  if (getSize(args) == 2)
 	    {
-	      chdir(args[1]);
+	      if (chdir(args[1]) == -1)
+		return (-1);
 	      puts(cli->path);
 	      cli->path = realpath(".", NULL);
 	      puts(cli->path);
 	    }
 	}
     }
+  return (0);
 }

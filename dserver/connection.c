@@ -66,7 +66,8 @@ int	connection(t_passwd *passwd, t_cli **cli)
     }
   else if ((((*cli)->logaccepted) == 1) && (((*cli)->passaccepted) == 0))
     {
-      (*cli)->passaccepted = check_pass((*cli)->cs, passwd, (*cli)->logtmp, (*cli)->buff);
+      (*cli)->passaccepted = check_pass((*cli)->cs, passwd,
+					(*cli)->logtmp, (*cli)->buff);
       if ((*cli)->passaccepted == -1)
 	return (-1);
       else if ((*cli)->passaccepted == 1)
